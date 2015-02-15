@@ -1567,7 +1567,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Africa_Namibia_1</name>
-               <description>+0100,+0200,UNKDST</description>
+               <description>+0100,+0200,NamDST</description>
 			<styleUrl>#mypoly54</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -1721,7 +1721,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Middle East_Syria,Jordan,Lebanon,Israel,Palestine_1</name>
-               <description>+0200,+0300,UNKDST</description>
+               <description>+0200,+0300,MEDST</description>
 			<styleUrl>#mypoly64</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -1945,7 +1945,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Caribbean_Cuba,Bahamas_1</name>
-               <description>-0500,-0400,UNKDST</description>
+               <description>-0500,-0400,NADST</description>
 			<styleUrl>#mypoly80</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -2127,7 +2127,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Asia_Georgia,Armenia,Azerbaijan_1</name>
-               <description>+0400,+0500,UNKDST</description>
+               <description>+0400,+0500,EuDST</description>
 			<styleUrl>#mypoly93</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -2211,7 +2211,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Greenland_Qaanaaq_1</name>
-               <description>-0400,-0300,UNKDST</description>
+               <description>-0400,-0300,MXDST</description>
 			<styleUrl>#mypoly99</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -2225,7 +2225,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Greenland_Ittoqqortoormiit_1</name>
-               <description>-0100,-0000,UNKDST</description>
+               <description>-0100,-0000,EuDST</description>
 			<styleUrl>#mypoly100</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -2239,7 +2239,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Greenland_Darnmarkshavn_1</name>
-               <description>+0000,+0100,UNKDST</description>
+               <description>+0000</description>
 			<styleUrl>#mypoly101</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -2253,7 +2253,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Greenland_Rest_1</name>
-               <description>-0300,-0200,UNKDST</description>
+               <description>-0300,-0200,GNLDST</description>
 			<styleUrl>#mypoly102</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -2267,7 +2267,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Arctic_Svalbard_1</name>
-               <description>+0100,+0200,UNKDST</description>
+               <description>+0100,+0200,EuDST</description>
 			<styleUrl>#mypoly103</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -2337,7 +2337,7 @@
 		</Placemark>
 		<Placemark>
 			<name>Atlantic_Prince Edward Islands_1</name>
-               <description>-0400,-0300,UNKDST</description>
+               <description>-0400,-0300,NADST</description>
 			<styleUrl>#mypoly108</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
