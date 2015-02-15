@@ -6,18 +6,18 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 
 1. Table of Contents
 
-  Section  1 - this section
-  Section  2 - What is minitz?
-  Section  3 - Why minitz was developed
-  Section  4 - How minitz works
-  Section  5 - How to use minitz
-  Section  6 - How to modify minitz
-  Section  7 - Limitations of minitz
-  Section  8 - Possible future upgrades for minitz
-  Section  9 - What to do if you want to include minitz in your own project
-  Section 10 - How you can help with minitz
-  Section 11 - How to contact the author(s) of minitz
-  Section 12 - Indicental downloads
+* Section  1 - this section
+* Section  2 - What is minitz?
+* Section  3 - Why minitz was developed
+* Section  4 - How minitz works
+* Section  5 - How to use minitz
+* Section  6 - How to modify minitz
+* Section  7 - Limitations of minitz
+* Section  8 - Possible future upgrades for minitz
+* Section  9 - What to do if you want to include minitz in your own project
+* Section 10 - How you can help with minitz
+* Section 11 - How to contact the author(s) of minitz
+* Section 12 - Indicental downloads
 
 2. What is minitz?
 
@@ -79,15 +79,10 @@ Distributed under the Apache License 2.0 (see LICENSE file).
   Minitz was originally developed for use in the Silicon Chip Nixie Clock
   Mk2 which includes the option of fitting a GPS module for accurate and
   automatic timekeeping. For more information on this project, see the
-  following URLs:
-
-[Part 1](http://www.siliconchip.com.au/Issue/2015/February/6-Digit+Retro+Nixie+Clock+Mk.2%2C+Pt.1)
-[Part 2](http://www.siliconchip.com.au/Issue/2015/March/6-Digit+Retro+Nixie+Clock+Mk.2%2C+Pt.2)
+  following URLs: [Part 1](http://www.siliconchip.com.au/Issue/2015/February/6-Digit+Retro+Nixie+Clock+Mk.2%2C+Pt.1)  [Part 2](http://www.siliconchip.com.au/Issue/2015/March/6-Digit+Retro+Nixie+Clock+Mk.2%2C+Pt.2)
 
   Most of the C code was written from scratch although the line intersection
-  routine is based on the one from this web page:
-
-[StackOverflow](http://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect)
+  routine is based on the one from this web page: [StackOverflow](http://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect)
 
   Thanks to use "iMalc" for the code.
 
@@ -169,9 +164,9 @@ Distributed under the Apache License 2.0 (see LICENSE file).
   resolution of 1/10000 of a degree. So 57N 37W is represented as 570000,
   -370000.
 
-  To expand on the time/date format, the time value is simply seconds +
-  minutes * 100 + hours * 10000. Date is similarly (year-2000) + month[1-12]
-  * 100 + day[1-31] * 10000. Date must be provided in order to correctly
+  To expand on the time/date format, the time value is simply `seconds +
+  minutes * 100 + hours * 10000`. Date is similarly `(year-2000) + month[1-12] *
+  100 + day[1-31] * 10000`. Date must be provided in order to correctly
   compute daylight savings.
 
 6. How to modify minitz
@@ -180,7 +175,7 @@ Distributed under the Apache License 2.0 (see LICENSE file).
   zone database. This can be done easily using Google Earth, as long as you
   have a PHP commandline interpreter installed. Assuming so, execute:
 
-  php extractkml.php
+  `php extractkml.php`
 
   This will read the contents of mytsz.json (the main database) and generate
   a file called "Timezones.kml". It's then simply a matter of opening the
@@ -198,12 +193,12 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 
   Once you've finished making changes, save the file, then run:
 
-  php importkml.php
+  `php importkml.php`
 
   This will then overwrite mytzs.json with the new data from Google Earth.
   To generate the new C database (tz_coords.h), run:
 
-  php compresstz.php > tz_coords.h
+  `php compresstz.php > tz_coords.h`
 
   You can then re-compile the C code and re-run the regression test but note
   that if you added any polygons or changed the order, you will also need to
@@ -365,9 +360,7 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 11. How to contact the author(s) of minitz
 
   Please let me know if you have any questions or concerns, find any
-  problems with minitz or are willing to help improve it. E-mail me at:
-
-minitz@siliconchip.com.au
+  problems with minitz or are willing to help improve it. E-mail me at: minitz@siliconchip.com.au
 
   If you make changes to one or more polygons, ideally I would like you to
   send only those polygons you've changed or at least indicate which ones
