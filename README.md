@@ -16,8 +16,8 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 * Section  8 - Possible future upgrades for minitz
 * Section  9 - What to do if you want to include minitz in your own project
 * Section 10 - How you can help with minitz
-* Section 11 - How to contact the author(s) of minitz
-* Section 12 - Indicental downloads
+* Section 11 - Indicental downloads
+* Section 12 - How to contact the author(s) of minitz
 
 2. What is minitz?
 
@@ -251,7 +251,7 @@ Distributed under the Apache License 2.0 (see LICENSE file).
   Please check the database to ensure that your own local time zone is
   correct, and any others you are familiar with. Please also add extra
   co-ordinates to the regression test. See Section 9 below if you wish to
-  help and contact me (Section 11) if you find any problems.
+  help and contact me (Section 12) if you find any problems.
 
   d) Difficult time zone rules: unfortunately, some locations such as
   various Middle Eastern countries and parts of Brazil have daylight savings
@@ -319,12 +319,12 @@ Distributed under the Apache License 2.0 (see LICENSE file).
   generate a library file). Alternatively, you can translate the minitz code
   into your preferred language and munge the tz_coords.h data to suit. If
   you do this, feel free to send send me the (tested and working!) results
-  and I'll include it in the package. See Section 11.
+  and I'll include it in the package. See Section 12.
 
   You are free to include minitz in your project, whether it's a commercial
   product or not, with no strings attached. But I would appreciate it if you
   dropped me a line and let me know you are doing so, to satisfy my
-  curiousity. See section 11.
+  curiousity. See section 12.
 
 10. How you can help with minitz
 
@@ -355,7 +355,19 @@ Distributed under the Apache License 2.0 (see LICENSE file).
   help in expanding time zones to cover the appropriate sections of ocean. I
   will pobably do this myself if nobody else does but help would be good.
 
-  See Section 11 below for details on how to send changes in.
+  See Section 12 below for details on how to send changes in.
+
+11. Incidental downloads
+
+  As a result of developing minitz, a few potentially useful kml polygon
+  files have been generated and these are available as separate downloads.
+  They are:
+
+* China (PROC)/Taiwan (ROC) boundary
+* Bangladesh boundary
+
+  Other useful boundaries could no doubt be extracted from the database but
+  are not readily available in the present form.
 
 11. How to contact the author(s) of minitz
 
@@ -373,17 +385,5 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 
   Thanks and I hope you find minitz useful!
 
-
 Nicholas Vinen.
 
-12. Incidental downloads
-
-  As a result of developing minitz, a few potentially useful kml polygon
-  files have been generated and these are available as separate downloads.
-  They are:
-
-China (PROC)/Taiwan (ROC) boundary
-Bangladesh boundary
-
-  Other useful boundaries could no doubt be extracted from the database but
-  are not readily available in the present form.
