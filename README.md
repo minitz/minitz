@@ -369,7 +369,7 @@ Distributed under the Apache License 2.0 (see LICENSE file).
   Other useful boundaries could no doubt be extracted from the database but
   are not readily available in the present form.
 
-11. How to contact the author(s) of minitz
+12. How to contact the author(s) of minitz
 
   Please let me know if you have any questions or concerns, find any
   problems with minitz or are willing to help improve it. E-mail me at: minitz@siliconchip.com.au
