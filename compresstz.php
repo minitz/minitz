@@ -212,6 +212,7 @@
     }
     print("}\n");
   } else {
+    print("\n");
     foreach( $dst_types as $type => $index ) {
       printf("#define DST_".strtoupper($type).str_repeat(" ", $longest_off + 3 - strlen($type))."0x%08x\n", 0x40000000>>($index-1));
     }
@@ -219,6 +220,11 @@
       printf("#define DST_DELTA_".$delta.str_repeat(" ", 4 - strlen($delta))."0x%08x\n", $index == 1 ? 0 : (0x40000000>>(count($dst_types)+$index-2)) );
     }
     print("\n");
+    print("#ifdef __cplusplus\n");
+    print("extern \"C\" {\n");
+    print("#endif\n");
+    print("\n");
+    print("#ifdef INCLUDE_TZ_DATA\n");
     print("const unsigned char tz_map[".count($tz_map)."] = { ".implode(", ", $tz_map)." };\n\n");
     print("const unsigned long timezones[".count($timezones)."] = {\n");
     $i = 0;
@@ -226,7 +232,12 @@
       print("\t\t".$timezone.($i == count($timezones)-1 ? " " : ",").str_repeat(" ", $longest_tz + 1 - strlen($timezone))."// ".$tz_map_names[$i]."\n");
       ++$i;
     }
-    print("};\n\n");
+    print("};\n");
+    print("#else//INCLUDE_TZ_DATA\n");
+    print("extern const unsigned char tz_map[".count($tz_map)."];\n\n");
+    print("extern const unsigned long timezones[".count($timezones)."];\n");
+    print("#endif//INCLUDE_TZ_DATA\n");
+    print("\n");
     print("#ifdef INCLUDE_TZ_NAMES\n");
     print("const char* tz_names[".count($tz_names)."] = {\n");
     $i = 0;
@@ -235,6 +246,8 @@
     }
     print("};\n");
     print("#endif//INCLUDE_TZ_NAMES\n\n");
+    print("\n");
+    print("#ifdef INCLUDE_TZ_COORDS\n");
     print("const unsigned char tz_coords[$n] = {");
     for( $i = 0; $i < $n; $i += 16 ) {
       $comma = "\n\t";
@@ -247,5 +260,12 @@
         print(",");
     }
     print("};\n");
+    print("#else//INCLUDE_TZ_COORDS\n");
+    print("extern const unsigned char tz_coords[$n];\n");
+    print("#endif//INCLUDE_TZ_COORDS\n");
+    print("\n");
+    print("#ifdef __cplusplus\n");
+    print("}\n");
+    print("#endif\n");
   }
 ?>

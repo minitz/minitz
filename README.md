@@ -46,6 +46,11 @@ Distributed under the Apache License 2.0 (see LICENSE file).
   sufficiently powerful computing device. Its low overhead means it won't
   bloat your software.
 
+  Even if you aren't interested in calculating the time zone from GPS data,
+  you may still find the minitz source code useful as it also contains
+  routines to apply the sometimes complex Daylight Savings rules for various
+  countries.
+
 3. Why minitz was developed
 
   Free time zone databases already exist however they have significant
@@ -141,11 +146,13 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 
 5. How to use minitz
 
-  The file "timezones.c" contains all the necessary code plus a test section
-  at the end. The supplied makefile builds an executable with this test
-  code. This can be run to perform a regression test. It goes through a
+  The file "timezones.c" and accompanying header file "timezones.h" contain
+  the code for determining a time zone from a lat/long while the time zone
+  offset and daylight savings calculation code is in "tzmaths.c" and
+  "tzmaths.h". The supplied makefile builds an executable with this test
+  code.  This can be run to perform a regression test.  It goes through a
   couple of hundred city lat/longs and checks that the correct time zone is
-  found for each. It also prints the computed local time for each city,
+  found for each.  It also prints the computed local time for each city,
   based on the PC's UTC time.
 
   All you need to do is look at the very simple "get_timezone" function
@@ -186,6 +193,10 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 
   Note that as stated in section 4, overlap regions tend to be "sloppy" to
   save space. Earlier polygons (ie, those higher up the list) have priority.
+  Note also that if you don't have a PHP interpreter, you can download the
+  supplied Timezones.kml database and open it directly, however you will
+  still need PHP to convert it back into C data should you wish to do so
+  later.
 
   If you need to add any polygons, make sure they are in the right order as
   per the explanation above and also make sure the description is set
@@ -200,7 +211,10 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 
   `php compresstz.php > tz_coords.h`
 
-  You can then re-compile the C code and re-run the regression test but note
+  This will be performed automatically if the JSON file has been updated
+  whenever "make" or "make test" are executed, prior to compiling the C
+  code. Once the code has been re-compiled, it will use the new data. You
+  should run the regression test ("make test") after making changes but note
   that if you added any polygons or changed the order, you will also need to
   re-arrange the regression test order to suit.
 
@@ -301,6 +315,11 @@ Distributed under the Apache License 2.0 (see LICENSE file).
   10-20% with no real loss in accuracy by simply tuning this parameter. But
   manually tweaking the vertices is bound to help also.
 
+  e) I am hoping to offer a PIC32 example program in the near future which
+  will acquire data from a serial GPS unit and dump the local time to a
+  serial console. This should make it very easy for hardware designers to
+  get up and running.
+
 9. What to do if you want to include minitz in your own project
 
   Simply compile in timezones.c (which requires tz_coords.h) and then use
@@ -359,12 +378,16 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 
 11. Incidental downloads
 
-  As a result of developing minitz, a few potentially useful kml polygon
-  files have been generated and these are available as separate downloads.
-  They are:
+  As a result of developing minitz, a few potentially useful kml polygons
+  have been generated and these are available as separate downloads.  They
+  are:
 
-* China (PROC)/Taiwan (ROC) boundary
-* Bangladesh boundary
+* China (PROC)/Taiwan (ROC) border data
+* Bangladesh border data
+* Paraguay border data
+* Uruguay border data
+
+  The data is available in the `Timezones.kml` file.
 
   Other useful boundaries could no doubt be extracted from the database but
   are not readily available in the present form.
@@ -372,7 +395,7 @@ Distributed under the Apache License 2.0 (see LICENSE file).
 12. How to contact the author(s) of minitz
 
   Please let me know if you have any questions or concerns, find any
-  problems with minitz or are willing to help improve it. E-mail me at: minitz@siliconchip.com.au
+  problems with minitz or are willing to help improve it. E-mail me at: minitz@users.noreply.github.com
 
   If you make changes to one or more polygons, ideally I would like you to
   send only those polygons you've changed or at least indicate which ones
