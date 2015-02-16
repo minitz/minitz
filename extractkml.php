@@ -1,5 +1,11 @@
 <?php
 
+/* minitz - MINiaturised International TimeZone database v1.0
+   
+   Written by Nicholas Vinen. Please see README and LICENSE files.
+   
+   PHP code to convert JSON file to KML format. */
+
   $tzs = json_decode(file_get_contents(empty($argv[1]) ? "mytzs.json" : $argv[1]), true);
   $colours = array("000000", "7f0000", "007f00", "00007f", "7f7f00", "007f7f", "7f007f", "7f7f7f");
 

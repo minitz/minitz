@@ -1,4 +1,10 @@
 
+/* minitz - MINiaturised International TimeZone database v1.0
+   
+   Written by Nicholas Vinen. Please see README and LICENSE files.
+   
+   Time zone offset / daylight savings manipulation header. */
+
 #ifndef TZMATHS_H
 #define	TZMATHS_H
 

@@ -1,5 +1,11 @@
 <?php
 
+/* minitz - MINiaturised International TimeZone database v1.0
+   
+   Written by Nicholas Vinen. Please see README and LICENSE files.
+   
+   PHP code to convert JSON file to C data. */
+
   function calc_intermediate_point_dist(&$a, &$b, &$c) {
     if( ($a[0] == $b[0] && $a[1] == $b[1]) || ($b[0] == $c[0] && $b[1] == $c[1]) )
       return 0;

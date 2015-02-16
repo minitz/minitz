@@ -1,4 +1,10 @@
 
+/* minitz - MINiaturised International TimeZone database v1.0
+   
+   Written by Nicholas Vinen. Please see README and LICENSE files.
+   
+   Main header. */
+
 #ifndef TIMEZONES_H
 #define	TIMEZONES_H
 

@@ -1,4 +1,10 @@
 
+/* minitz - MINiaturised International TimeZone database v1.0
+   
+   Written by Nicholas Vinen. Please see README and LICENSE files.
+   
+   Main source file. */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

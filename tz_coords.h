@@ -1,4 +1,10 @@
 
+/* minitz - MINiaturised International TimeZone database v1.0
+   
+   Written by Nicholas Vinen. Please see README and LICENSE files.
+   
+   Time zone data. */
+
 #define DST_AU        0x40000000
 #define DST_NZ        0x20000000
 #define DST_FIJI      0x10000000

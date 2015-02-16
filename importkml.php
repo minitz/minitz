@@ -1,5 +1,11 @@
 <?php
 
+/* minitz - MINiaturised International TimeZone database v1.0
+   
+   Written by Nicholas Vinen. Please see README and LICENSE files.
+   
+   PHP code to convert KML file to JSON format. */
+
   $GLOBALS['in_placemark'] = false;
   $GLOBALS['in_placemark_name'] = false;
   $GLOBALS['in_placemark_description'] = false;
