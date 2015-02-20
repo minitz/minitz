@@ -1,10 +1,4 @@
 
-/* minitz - MINiaturised International TimeZone database v1.0
-   
-   Written by Nicholas Vinen. Please see README and LICENSE files.
-   
-   Main source file. */
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -338,6 +332,7 @@ int main(void) {
   print_timezone_info("Tiwi Island", -113600, 1310000, expected_tz);
   ++expected_tz;
   print_timezone_info("Perth", -319522, 1158589, expected_tz);
+  print_timezone_info("Cartier Island", -122583, 1230417, expected_tz);
   ++expected_tz;
   print_timezone_info("Eucla", -316750, 1288831, expected_tz);
   ++expected_tz;
@@ -360,12 +355,16 @@ int main(void) {
   print_timezone_info("Malila", 145833, 1209667, expected_tz);
   print_timezone_info("Makassar", -51333, 1194167, expected_tz);
   ++expected_tz;
+  print_timezone_info("Melekeok", 73500, 1344667, expected_tz);
+  ++expected_tz;
   print_timezone_info("New Caledonia", -212500, 1653000, expected_tz);
   print_timezone_info("Solomon Islands", -94667, 1598167, expected_tz);
   ++expected_tz;
   print_timezone_info("Suva", -181416, 1784419, expected_tz);
+  print_timezone_info("Vatoa", -165667, -1787167, expected_tz);
   ++expected_tz;
   print_timezone_info("Honolulu", 213000, -1578167, expected_tz);
+  print_timezone_info("Jarvis Island", -3667, -1600167, expected_tz);
   ++expected_tz;
   print_timezone_info("Anchorage", 612167, -1499000, expected_tz);
   ++expected_tz;
@@ -419,9 +418,10 @@ int main(void) {
   print_timezone_info("Berlin", 525167, 133833, expected_tz);
   print_timezone_info("Krakow", 500614, 199372, expected_tz);
   ++expected_tz;
+  print_timezone_info("Reykjavic", 641333, -219333, expected_tz);
+  ++expected_tz;
   print_timezone_info("London", 515072, -1275, expected_tz);
   print_timezone_info("Lisbon", 387139, -91394, expected_tz);
-  print_timezone_info("Reykjavic", 641333, -219333, expected_tz);
   print_timezone_info("Torshavn", 620117, -67675, expected_tz);
   ++expected_tz;
   print_timezone_info("Ankara", 399300, 328600, expected_tz);
@@ -449,6 +449,7 @@ int main(void) {
   print_timezone_info("Kathmandu", 277000, 853333, expected_tz);
   ++expected_tz;
   print_timezone_info("Male", 41753, 735089, expected_tz);
+  print_timezone_info("Ile Amsterdam", -378258, 775547, expected_tz);
   ++expected_tz;
   print_timezone_info("Diego Garcia", -73133, 724111, expected_tz);
   ++expected_tz;
@@ -508,6 +509,7 @@ int main(void) {
   print_timezone_info("Mogadisu", 20333, 453500, expected_tz);
   print_timezone_info("Moroni", -117500, 432000, expected_tz);
   print_timezone_info("Nairobi", -12833, 368167, expected_tz);
+  print_timezone_info("Europa Island", -223683, 403633, expected_tz);
   ++expected_tz;
   print_timezone_info("Doha", 252867, 515333, expected_tz);
   print_timezone_info("Dubai", 249500, 553333, expected_tz);
@@ -532,6 +534,7 @@ int main(void) {
   print_timezone_info("Praia", 149180, -235090, expected_tz);
   ++expected_tz;
   print_timezone_info("Jamestown", -159244, -57181, expected_tz);
+  print_timezone_info("Bouvet Island", -544300, 33800, expected_tz);
   ++expected_tz;
   print_timezone_info("Port Louis", -201644, 575041, expected_tz);
   print_timezone_info("Victoria", -46167, 554500, expected_tz);
@@ -578,12 +581,14 @@ int main(void) {
   print_timezone_info("Lima", -120433, -770283, expected_tz);
   print_timezone_info("Quito", -2333, -785167, expected_tz);
   print_timezone_info("Bogota", 45981, -740758, expected_tz);
+  print_timezone_info("Isla Salas y Gomez", -264722, -1053625, expected_tz);
   ++expected_tz;
   print_timezone_info("Santiago", -334500, -706667, expected_tz);
   print_timezone_info("Sucre", -190500, -652500, expected_tz);
   print_timezone_info("Manaus", -31000, -600167, expected_tz);
   ++expected_tz;
   print_timezone_info("Port Stanley", -516921, -578589, expected_tz);
+  print_timezone_info("San Ambrosio Island", -263333, -798000, expected_tz);
   ++expected_tz;
   print_timezone_info("Puerto Baquerizo Moreno", -9025, -896092, expected_tz);
   ++expected_tz;
@@ -597,10 +602,12 @@ int main(void) {
   print_timezone_info("San Jose, Costa Rica", 96000, -839500, expected_tz);
   ++expected_tz;
   print_timezone_info("Tijuana", 325250, -1170333, expected_tz);
+  print_timezone_info("Isla Clarion", 183667, -1147333, expected_tz);
   ++expected_tz;
   print_timezone_info("La Paz", 241422, -1103108, expected_tz);
   print_timezone_info("Nogales", 313186, -1109458, expected_tz);
   print_timezone_info("Chihuahua", 286333, -1060833, expected_tz);
+  print_timezone_info("Isla Socorro", 187844, -1109750, expected_tz);
   ++expected_tz;
   print_timezone_info("Merida", 209700, -896200, expected_tz);
   ++expected_tz;
@@ -621,6 +628,7 @@ int main(void) {
   print_timezone_info("Santo Domingo", 184667, -699500, expected_tz);
   print_timezone_info("San Juan", 184500, -660667, expected_tz);
   print_timezone_info("Kingstown", 131578, -612250, expected_tz);
+  print_timezone_info("Hamilton", 322930, -647820, expected_tz);
   ++expected_tz;
   print_timezone_info("Samara", 532028, 501408, expected_tz);
   print_timezone_info("Izhevsk", 568333, 531833, expected_tz);
@@ -675,6 +683,7 @@ int main(void) {
   print_timezone_info("Mumbai", 189750, 728258, expected_tz);
   print_timezone_info("New Delhi", 286139, 772089, expected_tz);
   print_timezone_info("Kotte", 69108, 798878, expected_tz);
+  print_timezone_info("Port Blair", 116683, 927378, expected_tz);
   ++expected_tz;
   print_timezone_info("Olgiy", 490000, 922408, expected_tz);
   ++expected_tz;
@@ -697,23 +706,41 @@ int main(void) {
   print_timezone_info("Edinburgh of the Seven Seas", -370667, -123167, expected_tz);
   ++expected_tz;
   print_timezone_info("King Edward Point", -542833, -365000, expected_tz);
+  print_timezone_info("Trindade Island", -205250, -293250, expected_tz);
+  print_timezone_info("St. Peter & St. Paul Archipelago", 9169, -293344, expected_tz);
   ++expected_tz;
   print_timezone_info("Marion Island", -467731, 378525, expected_tz);
   ++expected_tz;
   print_timezone_info("Ile aux Cochons", -461000, 502333, expected_tz);
   print_timezone_info("Ile de la Possession", -464000, 517667, expected_tz);
   ++expected_tz;
+  print_timezone_info("Baker Island", 1947, -1764794, expected_tz);
+  ++expected_tz;
+  print_timezone_info("Funafuti", -85000, 1791833, expected_tz);
+  print_timezone_info("Alofitai", -143286, -1780611, expected_tz);
+  print_timezone_info("South Tarawa", 14333, 1730000, expected_tz);
+  ++expected_tz;
   print_timezone_info("Apia", -138333, -1717500, expected_tz);
+  print_timezone_info("Palmyra Atoll", 58833, -1620833, expected_tz);
   ++expected_tz;
   print_timezone_info("Nuku'alofa", -211333, -1752000, expected_tz);
   print_timezone_info("Nukunonu", -91683, -1718097, expected_tz);
   ++expected_tz;
-  print_timezone_info("Atuona", -98030, -1390396, expected_tz);
+  print_timezone_info("Kiritimati", 18667, -1574000, expected_tz);
   ++expected_tz;
-  print_timezone_info("Papeete", -175350, -1495696, expected_tz);
+  print_timezone_info("Avarua", -212000, -1597667, expected_tz);
+  ++expected_tz;
+  print_timezone_info("Atuona", -98030, -1390396, expected_tz);
   print_timezone_info("Nuku Hiva", -88667, -1401333, expected_tz);
   ++expected_tz;
+  print_timezone_info("Mangareva", -231400, -1349400, expected_tz);
+  ++expected_tz;
+  print_timezone_info("Papeete", -175350, -1495696, expected_tz);
+  ++expected_tz;
   print_timezone_info("Adamstown", -254000, -1304000, expected_tz);
+  print_timezone_info("Clipperton Island", 103000, -1092167, expected_tz);
+  ++expected_tz;
+  print_timezone_info("Easter Island", -271167, -1093667, expected_tz);
   ++expected_tz;
 
   if( expected_tz == sizeof(tz_map) )
