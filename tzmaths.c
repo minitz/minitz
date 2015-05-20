@@ -374,7 +374,7 @@ static unsigned char _apply_timezone(int* time, int* date, int tz, int force_dst
           if( info->start_month < info->finish_month )
             dst_in_effect = (month > info->start_month && month < info->finish_month);
           else
-            dst_in_effect = (month < info->start_month || month > info->finish_month);
+            dst_in_effect = (month > info->start_month || month < info->finish_month);
         }
         if( dst_in_effect && (info->flag&EXCEPT_RAMADAN) && is_date_within_ramadan(day, month, year) )
           dst_in_effect = 0;
