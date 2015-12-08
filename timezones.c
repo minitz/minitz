@@ -407,6 +407,8 @@ int main(void) {
   print_timezone_info("Winnipeg", 498994, -971392, expected_tz);
   print_timezone_info("Kenora", 498387, -928123, expected_tz);
   ++expected_tz;
+  print_timezone_info("Fort Nelson", 588059, -1226965, expected_tz);
+  ++expected_tz;
   print_timezone_info("Vancouver", 492500, -1231000, expected_tz);
   print_timezone_info("Whitehorse", 607167, -1350500, expected_tz);
   ++expected_tz;
@@ -438,9 +440,10 @@ int main(void) {
   print_timezone_info("Shenzhen", 225500, 1141000, expected_tz);
   print_timezone_info("Taipei", 250333, 1216333, expected_tz);
   ++expected_tz;
+  print_timezone_info("Pyongyang", 390194, 1257381, expected_tz);
+  ++expected_tz;
   print_timezone_info("Tokyo", 356895, 1396917, expected_tz);
   print_timezone_info("Seoul", 375667, 1269781, expected_tz);
-  print_timezone_info("Pyongyang", 390194, 1257381, expected_tz);
   ++expected_tz;
   print_timezone_info("Dhaka", 237000, 903750, expected_tz);
   ++expected_tz;
@@ -584,6 +587,7 @@ int main(void) {
   print_timezone_info("Isla Salas y Gomez", -264722, -1053625, expected_tz);
   ++expected_tz;
   print_timezone_info("Santiago", -334500, -706667, expected_tz);
+  ++expected_tz;
   print_timezone_info("Sucre", -190500, -652500, expected_tz);
   print_timezone_info("Manaus", -31000, -600167, expected_tz);
   ++expected_tz;
@@ -622,8 +626,9 @@ int main(void) {
   ++expected_tz;
   print_timezone_info("Port-au-Prince", 185333, -723333, expected_tz);
   ++expected_tz;
-  print_timezone_info("Kingston", 179833, -768000, expected_tz);
   print_timezone_info("George Town", 193034, -813863, expected_tz);
+  ++expected_tz;
+  print_timezone_info("Kingston", 179833, -768000, expected_tz);
   ++expected_tz;
   print_timezone_info("Santo Domingo", 184667, -699500, expected_tz);
   print_timezone_info("San Juan", 184500, -660667, expected_tz);

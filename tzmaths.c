@@ -1,15 +1,7 @@
 
-/* minitz - MINiaturised International TimeZone database v1.0
-   
-   Written by Nicholas Vinen. Please see README and LICENSE files.
-   
-   Time zone offset / daylight savings manipulation routines. */
-
-
 #include "tzmaths.h"
 #define INCLUDE_TZ_DATA
 #include "tz_coords.h"
-
 
 typedef struct {
   unsigned long flag;
@@ -55,7 +47,8 @@ static const daylight_savings_info daylight_savings[] = {
   { DST_PAL,                       3, WEEK_LAST, DAY_FRI,   0, 10, WEEK_4TH,  DAY_FRI,  0 },
   { DST_NAM,                       9, WEEK_1ST,  DAY_SUN,   2,  4, WEEK_1ST,  DAY_SUN,  1 },
   { DST_SAMOA,                     9, WEEK_LAST, DAY_SUN,   0,  4, WEEK_1ST,  DAY_SAT,  3 },
-  { DST_IRAN,                      3, WEEK_EQUI,       1,   0,  9, WEEK_EQUI,       1, -1 }
+  { DST_IRAN,                      3, WEEK_EQUI,       1,   0,  9, WEEK_EQUI,       1, -1 },
+  { DST_MONGOL,                    3, WEEK_LAST, DAY_SAT,   2,  9, WEEK_LAST, DAY_SAT,  1 }
 };
 
 // Easter dates for years 2000-2099. Positive for April day, negative for March.
@@ -121,12 +114,12 @@ void add_timezone_offset(int* time, int* date, int offset) {
   int day = *date/10000;
 
   minutes += offset%100;
-  if( minutes > 60 ) {
+  if( minutes >= 60 ) {
     hours += 1;
     minutes -= 60;
   }
   hours += offset/100;
-  if( hours > 24 ) {
+  if( hours >= 24 ) {
     day += 1;
     hours -= 24;
   }
@@ -347,7 +340,7 @@ static unsigned char _apply_timezone(int* time, int* date, int tz, int force_dst
       minutes -= 60;
     }
     hours += offset/100;
-    if( hours > 24 ) {
+    if( hours >= 24 ) {
       day += 1;
       hours -= 24;
     }
